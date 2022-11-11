@@ -1,0 +1,15 @@
+
+<div class="search-results"
+    infinite-scroll
+    [infiniteScrollDistance]="scrollDistance"
+    [infiniteScrollUpDistance]="scrollUpDistance"
+    [infiniteScrollThrottle]="throttle"
+    (scrolled)="onScrollDown($event)">
+  <div class="container">
+    <figure *ngFor="let pic of pics; let i = index">
+      <img [src]="pic.download_url"  alt="Card image caption">  
+    </figure>
+  </div>
+</div>
+
+
